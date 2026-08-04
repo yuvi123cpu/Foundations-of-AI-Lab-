@@ -2,7 +2,7 @@
 
 [chatgpt link for water_jug_ref](https://chatgpt.com/share/6a69d539-c598-83e8-ae31-a7bf50bf649d)
 
-#CODE
+#CODE Water Jug Problem
 
 def successors(state):
     x, y = state
@@ -31,3 +31,32 @@ while frontier and level < 8:
     print("Level", level, "->", len(new), "new states:", sorted(new))
     frontier = new          # what we just found becomes what we expand next
 print("Total states found:", len(seen))
+
+
+Code for BFS
+
+
+graph = {'A': ['B','C'],
+         'B': ['D','E'],
+         'C': ['F','G'],
+         'D': [],  'E': ['H'],
+         'F': [],  'G': [],  'H': []}
+def bfs(start, goal):
+    queue   = [[start]]     # a list of PATHS, not nodes
+    visited = []
+    while queue:
+        path = queue.pop(0)     # <-- FIFO: take from the FRONT
+        node = path[-1]         # current node = last item of the path
+        if node == goal:
+            return path, visited
+        if node not in visited:
+            visited.append(node)
+            for n in graph[node]:
+                queue.append(path + [n])
+    return None, visited
+p, v = bfs('A', 'H')
+print("BFS path   :", p)
+print("BFS visited:", v)
+
+
+
