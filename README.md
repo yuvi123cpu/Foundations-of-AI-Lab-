@@ -34,8 +34,6 @@ print("Total states found:", len(seen))
 
 
 
-print("BFS path   :", p)
-print("BFS visited:", v)
 
 
 
