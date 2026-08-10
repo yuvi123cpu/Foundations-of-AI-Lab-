@@ -2,7 +2,7 @@
 
 [chatgpt link for water_jug_ref](https://chatgpt.com/share/6a69d539-c598-83e8-ae31-a7bf50bf649d)
 
-#CODE Water Jug Problem
+# Water Jug Problem
 
 def successors(state):
     x, y = state
@@ -34,7 +34,7 @@ print("Total states found:", len(seen))
 
 
 
-#CODE FOR BFS
+# BFS
 
 
 graph = {'A': ['B','C'],
@@ -60,7 +60,7 @@ print("BFS path   :", p)
 print("BFS visited:", v)
 
 
-#CODE FOR DFS
+# DFS
 
 
 
@@ -88,11 +88,9 @@ print("DFS visited:", v)
 
 
 
-#CODE FOR UCS
+# UCS(Uniform Cost Search)
 
 
-
-# LAB 3: Uniform Cost Search
 graph = {'A': [('B',1), ('C',4)],
          'B': [('D',5), ('C',2)],
          'C': [('D',1)],
@@ -111,7 +109,7 @@ print("UCS:", ucs('A', 'D'))
 
 
 
-#CODE OF GREEDY
+# Greedy
 
 
 
