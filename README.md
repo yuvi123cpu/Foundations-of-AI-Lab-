@@ -137,7 +137,7 @@ print("Greedy path :", path)
 print("Actual cost :", cost)
 
 
-#A* Algo
+# A* Algo
 
 
 graph = {'S': [('A',2), ('B',1)],
