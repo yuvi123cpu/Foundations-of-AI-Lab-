@@ -145,11 +145,12 @@ graph = {'S': [('A',2), ('B',1)],
          'B': [('G',4)],
          'G': []}
 h = {'S': 4, 'A': 2, 'B': 3, 'G': 0}
-# ---- check the heuristic never overestimates ----
 true_cost = {'S': 5, 'A': 10, 'B': 4, 'G': 0}
+
 for node in h:
     ok = "OK" if h[node] <= true_cost[node] else "VIOLATION"
     print(f"  h({node}) = {h[node]}   true = {true_cost[node]}   {ok}")
+    
 def astar(start, goal):
     queue = [(h[start], 0, [start])]      # (f, g, path)  <-- CHANGE 1
     while queue:
