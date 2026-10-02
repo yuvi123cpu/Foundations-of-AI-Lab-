@@ -170,7 +170,6 @@ print("Cost    :", cost)
 
 # Hill Climbing Algo
 
-# LAB 6: Hill Climbing on a bumpy function
 import math
 def g(x):
     """The objective function. Bigger is better."""
