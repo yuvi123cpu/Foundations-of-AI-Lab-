@@ -168,6 +168,26 @@ print("A* path :", path)
 print("Cost    :", cost)
 
 
+# Hill Climbing Algo
+
+# LAB 6: Hill Climbing on a bumpy function
+import math
+def g(x):
+    """The objective function. Bigger is better."""
+    return math.sin(x) + math.sin(3*x)/3
+def hill_climb(start, step=0.25):
+    x = start                     # the ONLY thing we remember
+    while True:
+        left  = x - step          # look one step left
+        right = x + step          # look one step right
+        best = left if g(left) > g(right) else right
+        if g(best) <= g(x):       # no neighbour is better
+            return x, g(x)        # we are on a peak -> STOP
+        x = best                  # climb, and repeat
+print("from x=0.5 :", hill_climb(0.5))
+print("from x=4.0 :", hill_climb(4.0))
+
+
 
 
 
